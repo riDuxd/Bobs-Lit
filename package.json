@@ -1,0 +1,24 @@
+{
+  "name": "bobs-lit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo This is a lit template, there is no bundler or bundling involved!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesandbox-app/lit-template.git"
+  },
+  "keywords": [],
+  "author": "Ives van Hoorne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codesandbox-app/lit-template/issues"
+  },
+  "homepage": "https://github.com/codesandbox-app/lit-template#readme",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
+}

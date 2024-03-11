@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lit Templates</title>
+    <meta name="description" content="Discover the ultimate collection of Lit Components using Vercel – a personal project showcasing a sleek, performant suite of web components built with Lit for modern web apps. Elevate your development with our easily integrable, stylish UI elements optimized for Vercel deployment." />
+    <script src="./lit.js" type="module"></script>
+    <link rel="stylesheet" href="./lit.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <bw-job-full name="Product Manager" department="Product" location="Naples, FL" report="CEO" link="#">
+        <!-- Job Description -->
+        <li slot="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li slot="job-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li slot="job-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+        <li slot="job-description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+        <!-- Qualifications -->
+        <li slot="job-qualifications">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li slot="job-qualifications">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li slot="job-qualifications">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+        <li slot="job-qualifications">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+        <!-- Benefits -->
+        <li slot="job-benefits">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li slot="job-benefits">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li slot="job-benefits">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+        <li slot="job-benefits">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+      </bw-job-full>
+      <bw-grid style="--max-width: unset">
+        <bw-location-card cardimage="https://bobswatches.imgix.net/images/managed/Bob's-Watches-Newport-Beach-Sell-Rolex.jpg" cardtitle="Newport Beach, CA" cardtext="1900 Quail St. Newport Beach, CA 92660" buttontext="View Newport Beach" buttonlink="/usa/newport-beach"></bw-location-card>
+        <bw-location-card cardimage="https://bobswatches.imgix.net/images/managed/Bob's-Watches-Naples-Sell-Rolex.jpg" cardtitle="Naples, CA" cardtext="380 10th St. S Naples, FL 34102" buttontext="View Naples" buttonlink="/usa/naples-rolex-watches"></bw-location-card>
+      </bw-grid>
+      <div>
+        <bw-joblist border="true" job="CTO"></bw-joblist>
+        <bw-joblist border="false"></bw-joblist>
+      </div>
+      <bw-ytembed ratio="" videoID="mVjYG9TSN88" image="https://miro.medium.com/v2/resize:fit:1920/format:webp/1*aCsnm9viiL5Fo0JC-I_exQ.png"></bw-ytembed>
+      <bw-process title="Our Promise" overline="TRUST | HONESTY | TRANSPARENCY">
+        <bw-svg-blurb icon="shield" heading="100% Authentic" text="All watches are 100% Authentic"></bw-svg-blurb>
+        <bw-svg-blurb icon="transparent" heading="Full Transparency" text="We publish the buy and sell prices for all watches to honor the fair market value of all products."></bw-svg-blurb>
+        <bw-svg-blurb icon="shipping" heading="Real Time Inventory" text="Every watch on our website is in stock and ready for sale. Including hourly New Arrivals."></bw-svg-blurb>
+        <bw-svg-blurb icon="truck" heading="Free Shipping" text="Enjoy fast, free overnight shipping on all orders."></bw-svg-blurb>
+      </bw-process>
+      <bw-grid style="--max-width: unset; --col-width: 280px">
+        <bw-svg-blurb align="left"></bw-svg-blurb>
+        <bw-svg-blurb align="center"></bw-svg-blurb>
+        <bw-svg-blurb align="right"></bw-svg-blurb>
+      </bw-grid>
+      <bw-grid style="--max-width: unset; --col-width: 256px">
+        <bw-brand-svg icon="transparent" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="shield" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="shipping" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="truck" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="money" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="chat" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="image" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="form" size="64px" fill="black" align="center"></bw-brand-svg>
+        <bw-brand-svg icon="watch" size="64px" fill="black" align="center"></bw-brand-svg>
+      </bw-grid>
+      <bw-grid style="--max-width: unset; --col-width: 280px">
+        <bw-heading-p level="3" heading="This is a left aligned blurb" text="Sed sit amet bibendum orci. Aenean accumsan, lacus id rhoncus finibus, nisl tortor facilisis dolor, eget varius orci tortor at enim. Sed interdum massa ut posuere facilisis." align=""></bw-heading-p>
+        <bw-heading-p level="3" heading="This is a center aligned blurb" text="Sed sit amet bibendum orci. Aenean accumsan, lacus id rhoncus finibus, nisl tortor facilisis dolor, eget varius orci tortor at enim. Sed interdum massa ut posuere facilisis." align="center"></bw-heading-p>
+        <bw-heading-p level="3" heading="This is a right aligned blurb" text="Sed sit amet bibendum orci. Aenean accumsan, lacus id rhoncus finibus, nisl tortor facilisis dolor, eget varius orci tortor at enim. Sed interdum massa ut posuere facilisis." align="right"></bw-heading-p>
+      </bw-grid>
+      <bw-list>
+        <li>Just a List</li>
+        <li>Just a List</li>
+        <li>Just a List</li>
+        <li>Just a List</li>
+      </bw-list>
+      <bw-image src="" lazy-loading="eager" priority="high" alt="Minimalist Room" ratio="21/9"></bw-image>
+      <bw-tabs numTabs="4"></bw-tabs>
+      <bw-grid style="--max-width: unset; --col-width: 50%">
+        <bw-overline-text overline="Overline Text" title="Title Goes Here"></bw-overline-text>
+        <bw-overline-text overline="Underline Text" title="Reverse Title Here" reverse="true"></bw-overline-text>
+      </bw-grid>
+      <div class="button-container">
+        <bw-button slot="cta" kind="link" variant="" link="#">Default</bw-button>
+        <bw-button slot="cta" kind="link" variant="outline" link="#">Outline</bw-button>
+        <bw-button slot="cta" kind="link" variant="white" link="#">White</bw-button>
+        <bw-button slot="cta" kind="link" variant="brand" link="#">Brand</bw-button>
+        <bw-button slot="cta" kind="link" variant="opaque" link="#">Opaque</bw-button>
+      </div>
+    </div>
+
+    <div class="wc-container">
+      <bw-fw-banner overline="This Is A" title="Left Image Banner" layout="img-left" img-src="https://images.unsplash.com/photo-1696761868245-3e96dfb8620b" lazy-loading="lazy" img-priority="low">
+        <p slot="content">Aliquam accumsan ipsum ut mauris lacinia, sit amet suscipit eros auctor. Nulla tristique lacus sit amet ligula tempor pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus non rutrum risus. Nam interdum magna vel nisi blandit volutpat.</p>
+        <bw-button slot="cta" kind="button" variant="white" link="https://bobswatches.com">View All</bw-button>
+      </bw-fw-banner>
+      <bw-fw-banner overline="This Is A" title="Right Image Banner" layout="img-right" img-src="" lazy-loading="lazy" img-priority="low">
+        <p slot="content">Aliquam accumsan ipsum ut mauris lacinia, sit amet suscipit eros auctor. Nulla tristique lacus sit amet ligula tempor pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus non rutrum risus. Nam interdum magna vel nisi blandit volutpat.</p>
+        <bw-button slot="cta" kind="link" variant="white" link="#">View All</bw-button>
+      </bw-fw-banner>
+      <bw-fw-banner variant="video" videoID="mVjYG9TSN88" overline="This Is A" title="Left Video Banner" layout="img-left" img-src="https://miro.medium.com/v2/resize:fit:1920/format:webp/1*aCsnm9viiL5Fo0JC-I_exQ.png" lazy-loading="lazy" img-priority="low">
+        <p slot="content">Aliquam accumsan ipsum ut mauris lacinia, sit amet suscipit eros auctor. Nulla tristique lacus sit amet ligula tempor pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus non rutrum risus. Nam interdum magna vel nisi blandit volutpat.</p>
+        <bw-button slot="cta" kind="link" variant="white" link="#">View All</bw-button>
+      </bw-fw-banner>
+    </div>
+
+    <!-- <style>
+      .wc-container {
+        opacity: 0;
+      }
+    
+      .wc-container.ready {
+        opacity: 1;
+        transition: .25s opacity;
+      }
+    </style>
+    
+    <script type="module">
+      await Promise.allSettled([
+        customElements.whenDefined('bw-fw-banner'),
+      ]);
+    
+      // Components are registered now! Add
+      // the `ready` class so the UI fades in.
+      document.querySelector('.wc-container').classList.add('ready');
+    </script> -->
+  </body>
+</html>
