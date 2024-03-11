@@ -1,4 +1,8 @@
-import { LitElement, css, html } from "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js";
+import {
+  LitElement,
+  css,
+  html,
+} from "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js";
 //=== Template ===//
 // class Template extends LitElement {
 //   static properties = {
@@ -229,7 +233,8 @@ class BwJobFull extends LitElement {
     /* Large devices (lg): 992px and up */
     @media screen and (min-width: 992px) {
       .job-banner {
-        box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+          0px 1px 2px 0px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
       }
 
@@ -251,7 +256,8 @@ class BwJobFull extends LitElement {
       .job-container__right__content {
         background-color: white;
         height: auto;
-        box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+          0px 1px 2px 0px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
       }
 
@@ -283,7 +289,8 @@ class BwJobFull extends LitElement {
     this.report = "to CMO";
     this.benefits = "Health + Dental + Vision + Life Insurance";
     this.link = "https://bobswatches.com";
-    this.bannerImg = "https://bobswatches.imgix.net/images/careers/job-banner.jpg";
+    this.bannerImg =
+      "https://bobswatches.imgix.net/images/careers/job-banner.jpg";
   }
 
   static instanceCounter = 0;
@@ -296,40 +303,84 @@ class BwJobFull extends LitElement {
   render() {
     return html`
       <div class="d-flex flex-column job-banner">
-        <bw-image src="${this.bannerImg}" lazy-loading="eager" priority="high" alt="Product team brainstorming" ratio="21/7"></bw-image>
-        <em style="padding: 8px; background-color: black; color: white;">“One of the coolest eCommerce companies on the planet.” - Forbes</em>
+        <bw-image
+          src="${this.bannerImg}"
+          lazy-loading="eager"
+          priority="high"
+          alt="Product team brainstorming"
+          ratio="21/7"
+        ></bw-image>
+        <em style="padding: 8px; background-color: black; color: white;"
+          >“One of the coolest eCommerce companies on the planet.” - Forbes</em
+        >
       </div>
       <div class="job-container">
         <div class="job-container__left">
           <div class="job-container-heading">
             <h1>${this.name}</h1>
-            <span style="color: #757575;">${this.department} | ${this.location}</span>
+            <span style="color: #757575;"
+              >${this.department} | ${this.location}</span
+            >
           </div>
           <div class="job-detail-list--inline">
-            <bw-button kind="link" variant="default" link="${this.link}">Apply For This Job</bw-button>
+            <bw-button kind="link" variant="default" link="${this.link}"
+              >Apply For This Job</bw-button
+            >
             <div class="job-detail-list-container">
-              <bw-labeltext label="Location" text="${this.location}"></bw-labeltext>
-              <bw-labeltext label="Industry" text="${this.industry}"></bw-labeltext>
+              <bw-labeltext
+                label="Location"
+                text="${this.location}"
+              ></bw-labeltext>
+              <bw-labeltext
+                label="Industry"
+                text="${this.industry}"
+              ></bw-labeltext>
               <bw-labeltext label="Market" text="${this.market}"></bw-labeltext>
-              <bw-labeltext label="Channel" text="${this.channel}"></bw-labeltext>
+              <bw-labeltext
+                label="Channel"
+                text="${this.channel}"
+              ></bw-labeltext>
               <bw-labeltext label="Report" text="${this.report}"></bw-labeltext>
-              <bw-labeltext label="Benefits" text="${this.benefits}"></bw-labeltext>
+              <bw-labeltext
+                label="Benefits"
+                text="${this.benefits}"
+              ></bw-labeltext>
             </div>
           </div>
           <slot name="summary">
             <p>
-              As the ${this.name}, Culpa nostrud est ex fugiat commodo do qui enim eu ut culpa. Non ad exercitation culpa sint laboris proident consectetur minim excepteur exercitation sit sit. Duis eu ullamco in velit labore amet id eiusmod. Proident velit nulla ullamco amet voluptate. Consectetur voluptate labore aliquip est laboris ad et incididunt cupidatat. Amet nisi ea nulla est minim. Reprehenderit adipisicing laborum reprehenderit proident sit. Irure ullamco eu non dolore eiusmod cupidatat magna quis mollit labore. Sint mollit in nostrud est id velit ipsum excepteur. Sit aliqua laboris
-              ad fugiat dolore. Mollit eu reprehenderit fugiat proident dolore.
+              As the ${this.name}, Culpa nostrud est ex fugiat commodo do qui
+              enim eu ut culpa. Non ad exercitation culpa sint laboris proident
+              consectetur minim excepteur exercitation sit sit. Duis eu ullamco
+              in velit labore amet id eiusmod. Proident velit nulla ullamco amet
+              voluptate. Consectetur voluptate labore aliquip est laboris ad et
+              incididunt cupidatat. Amet nisi ea nulla est minim. Reprehenderit
+              adipisicing laborum reprehenderit proident sit. Irure ullamco eu
+              non dolore eiusmod cupidatat magna quis mollit labore. Sint mollit
+              in nostrud est id velit ipsum excepteur. Sit aliqua laboris ad
+              fugiat dolore. Mollit eu reprehenderit fugiat proident dolore.
             </p>
           </slot>
           <div>
             <strong>Job Description</strong>
             <slot name="job-description">
               <ul class="u-list">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </li>
+                <li>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
+                </li>
               </ul>
             </slot>
           </div>
@@ -337,10 +388,22 @@ class BwJobFull extends LitElement {
             <strong>Qualifications</strong>
             <slot name="job-qualifications">
               <ul class="u-list">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </li>
+                <li>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
+                </li>
               </ul>
             </slot>
           </div>
@@ -348,10 +411,22 @@ class BwJobFull extends LitElement {
             <strong>What We Offer</strong>
             <slot name="job-benefits">
               <ul class="u-list">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </li>
+                <li>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
+                </li>
               </ul>
             </slot>
           </div>
@@ -360,15 +435,29 @@ class BwJobFull extends LitElement {
         <div class="job-container__right">
           <div class="job-container__right__content">
             <div style="padding: 24px; border-bottom: 1px solid #d9d9d9;">
-              <bw-button kind="link" variant="default" link="${this.link}">Apply For This Job</bw-button>
+              <bw-button kind="link" variant="default" link="${this.link}"
+                >Apply For This Job</bw-button
+              >
             </div>
             <div class="job-detail-list-container">
-              <bw-labeltext label="Location" text="${this.location}"></bw-labeltext>
-              <bw-labeltext label="Industry" text="${this.industry}"></bw-labeltext>
+              <bw-labeltext
+                label="Location"
+                text="${this.location}"
+              ></bw-labeltext>
+              <bw-labeltext
+                label="Industry"
+                text="${this.industry}"
+              ></bw-labeltext>
               <bw-labeltext label="Market" text="${this.market}"></bw-labeltext>
-              <bw-labeltext label="Channel" text="${this.channel}"></bw-labeltext>
+              <bw-labeltext
+                label="Channel"
+                text="${this.channel}"
+              ></bw-labeltext>
               <bw-labeltext label="Report" text="${this.report}"></bw-labeltext>
-              <bw-labeltext label="Benefits" text="${this.benefits}"></bw-labeltext>
+              <bw-labeltext
+                label="Benefits"
+                text="${this.benefits}"
+              ></bw-labeltext>
             </div>
           </div>
         </div>
@@ -517,7 +606,8 @@ class BwJob extends LitElement {
       .job-container__right__content {
         background-color: white;
         height: auto;
-        box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+          0px 1px 2px 0px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
       }
 
@@ -564,33 +654,69 @@ class BwJob extends LitElement {
         <div class="job-container__left">
           <div class="job-container-heading">
             <h1>${this.name}</h1>
-            <span style="color: #757575;">${this.department} | ${this.location}</span>
+            <span style="color: #757575;"
+              >${this.department} | ${this.location}</span
+            >
           </div>
           <div class="job-detail-list--inline">
-            <bw-button kind="link" variant="default" link="${this.link}">Apply For This Job</bw-button>
+            <bw-button kind="link" variant="default" link="${this.link}"
+              >Apply For This Job</bw-button
+            >
             <div class="job-detail-list-container">
-              <bw-labeltext label="Location" text="${this.location}"></bw-labeltext>
-              <bw-labeltext label="Industry" text="${this.industry}"></bw-labeltext>
+              <bw-labeltext
+                label="Location"
+                text="${this.location}"
+              ></bw-labeltext>
+              <bw-labeltext
+                label="Industry"
+                text="${this.industry}"
+              ></bw-labeltext>
               <bw-labeltext label="Market" text="${this.market}"></bw-labeltext>
-              <bw-labeltext label="Channel" text="${this.channel}"></bw-labeltext>
+              <bw-labeltext
+                label="Channel"
+                text="${this.channel}"
+              ></bw-labeltext>
               <bw-labeltext label="Report" text="${this.report}"></bw-labeltext>
-              <bw-labeltext label="Benefits" text="${this.benefits}"></bw-labeltext>
+              <bw-labeltext
+                label="Benefits"
+                text="${this.benefits}"
+              ></bw-labeltext>
             </div>
           </div>
           <slot name="summary">
             <p>
-              As the ${this.name}, Culpa nostrud est ex fugiat commodo do qui enim eu ut culpa. Non ad exercitation culpa sint laboris proident consectetur minim excepteur exercitation sit sit. Duis eu ullamco in velit labore amet id eiusmod. Proident velit nulla ullamco amet voluptate. Consectetur voluptate labore aliquip est laboris ad et incididunt cupidatat. Amet nisi ea nulla est minim. Reprehenderit adipisicing laborum reprehenderit proident sit. Irure ullamco eu non dolore eiusmod cupidatat magna quis mollit labore. Sint mollit in nostrud est id velit ipsum excepteur. Sit aliqua laboris
-              ad fugiat dolore. Mollit eu reprehenderit fugiat proident dolore.
+              As the ${this.name}, Culpa nostrud est ex fugiat commodo do qui
+              enim eu ut culpa. Non ad exercitation culpa sint laboris proident
+              consectetur minim excepteur exercitation sit sit. Duis eu ullamco
+              in velit labore amet id eiusmod. Proident velit nulla ullamco amet
+              voluptate. Consectetur voluptate labore aliquip est laboris ad et
+              incididunt cupidatat. Amet nisi ea nulla est minim. Reprehenderit
+              adipisicing laborum reprehenderit proident sit. Irure ullamco eu
+              non dolore eiusmod cupidatat magna quis mollit labore. Sint mollit
+              in nostrud est id velit ipsum excepteur. Sit aliqua laboris ad
+              fugiat dolore. Mollit eu reprehenderit fugiat proident dolore.
             </p>
           </slot>
           <div>
             <strong>Job Description</strong>
             <slot name="job-description">
               <ul class="u-list">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </li>
+                <li>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
+                </li>
               </ul>
             </slot>
           </div>
@@ -598,10 +724,22 @@ class BwJob extends LitElement {
             <strong>Qualifications</strong>
             <slot name="job-qualifications">
               <ul class="u-list">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </li>
+                <li>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
+                </li>
               </ul>
             </slot>
           </div>
@@ -609,10 +747,22 @@ class BwJob extends LitElement {
             <strong>What We Offer</strong>
             <slot name="job-benefits">
               <ul class="u-list">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </li>
+                <li>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </li>
+                <li>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
+                </li>
               </ul>
             </slot>
           </div>
@@ -621,15 +771,29 @@ class BwJob extends LitElement {
         <div class="job-container__right">
           <div class="job-container__right__content">
             <div style="padding: 24px; border-bottom: 1px solid #d9d9d9;">
-              <bw-button kind="link" variant="default" link="${this.link}">Apply For This Job</bw-button>
+              <bw-button kind="link" variant="default" link="${this.link}"
+                >Apply For This Job</bw-button
+              >
             </div>
             <div class="job-detail-list-container">
-              <bw-labeltext label="Location" text="${this.location}"></bw-labeltext>
-              <bw-labeltext label="Industry" text="${this.industry}"></bw-labeltext>
+              <bw-labeltext
+                label="Location"
+                text="${this.location}"
+              ></bw-labeltext>
+              <bw-labeltext
+                label="Industry"
+                text="${this.industry}"
+              ></bw-labeltext>
               <bw-labeltext label="Market" text="${this.market}"></bw-labeltext>
-              <bw-labeltext label="Channel" text="${this.channel}"></bw-labeltext>
+              <bw-labeltext
+                label="Channel"
+                text="${this.channel}"
+              ></bw-labeltext>
               <bw-labeltext label="Report" text="${this.report}"></bw-labeltext>
-              <bw-labeltext label="Benefits" text="${this.benefits}"></bw-labeltext>
+              <bw-labeltext
+                label="Benefits"
+                text="${this.benefits}"
+              ></bw-labeltext>
             </div>
           </div>
         </div>
@@ -827,13 +991,28 @@ class BwLocationCard extends LitElement {
   render() {
     return html`
       <div class="bw-location-card">
-        <bw-image src="${this.cardImage}" lazy-loading="lazy" priority="low" alt="Newport Beach Location" ratio="16/9"></bw-image>
+        <bw-image
+          src="${this.cardImage}"
+          lazy-loading="lazy"
+          priority="low"
+          alt="Newport Beach Location"
+          ratio="16/9"
+        ></bw-image>
         <div class="bw-location-card__text-container">
           <div>
             <h3 class="h4">${this.cardTitle || "Newport Beach, CA"}</h3>
-            <span>${this.cardText || "1900 Quail St. Newport Beach, CA 92660"}</span>
+            <span
+              >${this.cardText ||
+              "1900 Quail St. Newport Beach, CA 92660"}</span
+            >
           </div>
-          <bw-button kind="link" variant="default" link="${this.buttonLink}" style="--width: 100%;">${this.buttonText || "Click Me"}</bw-button>
+          <bw-button
+            kind="link"
+            variant="default"
+            link="${this.buttonLink}"
+            style="--width: 100%;"
+            >${this.buttonText || "Click Me"}</bw-button
+          >
         </div>
       </div>
     `;
@@ -941,12 +1120,25 @@ class BwJobList extends LitElement {
 
   render() {
     return html`
-      <div class="bw-joblist" style=${this.border === "true" ? "border-bottom: 1px solid #d9d9d9" : ""}>
+      <div
+        class="bw-joblist"
+        style=${this.border === "true"
+          ? "border-bottom: 1px solid #d9d9d9"
+          : ""}
+      >
         <div class="bw-joblist__text">
           <span class="bw-overline">${this.job}</span>
           <span style="color: #757575">${this.location}</span>
         </div>
-        <bw-button class="bw-joblist__button" kind="link" variant="default" id="" link=${this.link} styles="">${this.buttonText}</bw-button>
+        <bw-button
+          class="bw-joblist__button"
+          kind="link"
+          variant="default"
+          id=""
+          link=${this.link}
+          styles=""
+          >${this.buttonText}</bw-button
+        >
       </div>
     `;
   }
@@ -1027,7 +1219,8 @@ class BwYtEmbed extends LitElement {
     super();
     this.videoID = "mVjYG9TSN88";
     this.ratio = "16/9";
-    this.defImg = "https://images.unsplash.com/photo-1693748960930-aa517d67fe00";
+    this.defImg =
+      "https://images.unsplash.com/photo-1693748960930-aa517d67fe00";
     this.imgixOpt = "?&auto=format&q=15&chromasub=444";
     this.imgix = "false";
     this.updateRatio();
@@ -1045,18 +1238,21 @@ class BwYtEmbed extends LitElement {
     }
 
     this.shadowRoot.querySelector("bw-button").style.display = "none";
-    this.player = new YT.Player(this.shadowRoot.querySelector("#player-container"), {
-      height: "100%",
-      videoId: this.videoID,
-      playerVars: {
-        autoplay: 1,
-        playsinline: 1,
-      },
-      events: {
-        onReady: this.onPlayerReady.bind(this),
-        onStateChange: this.onPlayerStateChange.bind(this),
-      },
-    });
+    this.player = new YT.Player(
+      this.shadowRoot.querySelector("#player-container"),
+      {
+        height: "100%",
+        videoId: this.videoID,
+        playerVars: {
+          autoplay: 1,
+          playsinline: 1,
+        },
+        events: {
+          onReady: this.onPlayerReady.bind(this),
+          onStateChange: this.onPlayerStateChange.bind(this),
+        },
+      }
+    );
   }
 
   loadYouTubeAPI() {
@@ -1101,8 +1297,19 @@ class BwYtEmbed extends LitElement {
     const src = this.image === "" ? this.defImg : this.image;
     const imgLogic = src + this.imgixOpt;
     return html`
-      <div id="video" style="background-image: url(${this.imgix === "true" ? imgLogic : this.image}); aspect-ratio: ${fbRatio};">
-        <bw-button kind="button" variant="" link="#" @click="${this.initializePlayer}">Play</bw-button>
+      <div
+        id="video"
+        style="background-image: url(${this.imgix === "true"
+          ? imgLogic
+          : this.image}); aspect-ratio: ${fbRatio};"
+      >
+        <bw-button
+          kind="button"
+          variant=""
+          link="#"
+          @click="${this.initializePlayer}"
+          >Play</bw-button
+        >
         <div id="player-container"></div>
       </div>
     `;
@@ -1147,8 +1354,17 @@ class BwProcess extends LitElement {
 
   render() {
     return html`
-      <bw-grid style="--max-width: 1920px; --col-width: 280px; margin-bottom: clamp(40px, 3dvw, 64px);"><bw-overline-text overline="${this.overline}" title="${this.title}" reverse="${this.reverse}"></bw-overline-text></bw-grid>
-      <bw-grid style="--max-width: 1920px; --col-width: 280px; --grid-gap: var(--resGap); --grid-gap-md: var(--resGap); --grid-gap-sm: var(--resGap); --grid-gap-xs: var(--resGap);">
+      <bw-grid
+        style="--max-width: 1920px; --col-width: 280px; margin-bottom: clamp(40px, 3dvw, 64px);"
+        ><bw-overline-text
+          overline="${this.overline}"
+          title="${this.title}"
+          reverse="${this.reverse}"
+        ></bw-overline-text
+      ></bw-grid>
+      <bw-grid
+        style="--max-width: 1920px; --col-width: 280px; --grid-gap: var(--resGap); --grid-gap-md: var(--resGap); --grid-gap-sm: var(--resGap); --grid-gap-xs: var(--resGap);"
+      >
         <slot></slot>
       </bw-grid>
     `;
@@ -1176,7 +1392,8 @@ class BwSVGBlurb extends LitElement {
     this.fill = "black";
     this.heading = "This is heading";
     this.level = 3;
-    this.text = "Sed sit amet bibendum orci. Aenean accumsan, lacus id rhoncus finibus, nisl tortor facilisis dolor.";
+    this.text =
+      "Sed sit amet bibendum orci. Aenean accumsan, lacus id rhoncus finibus, nisl tortor facilisis dolor.";
     this.align = "left";
   }
 
@@ -1196,8 +1413,18 @@ class BwSVGBlurb extends LitElement {
 
   render() {
     return html`
-      <bw-brand-svg icon="${this.icon}" size="${this.size}" fill="${this.fill}" align="${this.align}"></bw-brand-svg>
-      <bw-heading-p level="${this.level}" heading="${this.heading}" text="${this.text}" align="${this.align}"></bw-heading-p>
+      <bw-brand-svg
+        icon="${this.icon}"
+        size="${this.size}"
+        fill="${this.fill}"
+        align="${this.align}"
+      ></bw-brand-svg>
+      <bw-heading-p
+        level="${this.level}"
+        heading="${this.heading}"
+        text="${this.text}"
+        align="${this.align}"
+      ></bw-heading-p>
     `;
   }
 }
@@ -1256,7 +1483,12 @@ class BwBrandSVG extends LitElement {
 
     switch (svg) {
       case "transparent":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -1266,25 +1498,69 @@ class BwBrandSVG extends LitElement {
           ${clipPathDef}
         </svg>`;
       case "shield":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C9.39661 3.9131 5.58192 4.33793 4 4.18621V12.8345C4 18.5393 9.33333 21.9885 12 23C14.6667 21.9885 20 18.5393 20 12.8345V4.18621C18.4181 4.33793 14.6034 3.9131 12 1ZM11.1376 13.2222L14.6667 9.69059L14.1246 9.14813L11.1376 12.1373L9.8754 10.8742L9.33333 11.4167L11.1376 13.2222Z" fill="${this.fill}" />
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 1C9.39661 3.9131 5.58192 4.33793 4 4.18621V12.8345C4 18.5393 9.33333 21.9885 12 23C14.6667 21.9885 20 18.5393 20 12.8345V4.18621C18.4181 4.33793 14.6034 3.9131 12 1ZM11.1376 13.2222L14.6667 9.69059L14.1246 9.14813L11.1376 12.1373L9.8754 10.8742L9.33333 11.4167L11.1376 13.2222Z"
+            fill="${this.fill}"
+          />
           ${clipPathDef}
         </svg>`;
       case "shipping":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1L3 5.5V17.5L12 22L21 17.5V5.5L12 1ZM8.4375 8.21875L16.6875 4.09375L15.1875 3.34375L6.9375 7.46875L8.4375 8.21875ZM3.75 17.0365V6.71353L6.75 8.21353V10.75L8.25 11.5V8.96353L11.25 10.4635V20.7865L3.75 17.0365ZM18 17.125L20.25 16V16.75L18 17.875V17.125ZM20.25 14.5L18.75 15.25V16L20.25 15.25V14.5Z" fill="${this.fill}" />
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 1L3 5.5V17.5L12 22L21 17.5V5.5L12 1ZM8.4375 8.21875L16.6875 4.09375L15.1875 3.34375L6.9375 7.46875L8.4375 8.21875ZM3.75 17.0365V6.71353L6.75 8.21353V10.75L8.25 11.5V8.96353L11.25 10.4635V20.7865L3.75 17.0365ZM18 17.125L20.25 16V16.75L18 17.875V17.125ZM20.25 14.5L18.75 15.25V16L20.25 15.25V14.5Z"
+            fill="${this.fill}"
+          />
           ${clipPathDef}
         </svg>`;
       case "truck":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3H16.5V4.875H20.625L23.25 7.5V15.75H22.875C22.6679 15.75 22.5 15.9179 22.5 16.125C22.5 16.3321 22.6679 16.5 22.875 16.5H23.25C23.6642 16.5 24 16.8358 24 17.25C24 17.6642 23.6642 18 23.25 18H20.25C20.25 16.3431 18.9069 15 17.25 15C15.5931 15 14.25 16.3431 14.25 18H8.25C8.25 16.3431 6.90685 15 5.25 15C3.59315 15 2.25 16.3431 2.25 18H0V3ZM22.5 7.81066L21.4393 6.75H16.5V11.25H22.5V7.81066Z" fill="${this.fill}" />
-          <path d="M19.5 18C19.5 19.2426 18.4926 20.25 17.25 20.25C16.0074 20.25 15 19.2426 15 18C15 16.7574 16.0074 15.75 17.25 15.75C18.4926 15.75 19.5 16.7574 19.5 18Z" fill="${this.fill}" />
-          <path d="M5.25 20.25C6.49264 20.25 7.5 19.2426 7.5 18C7.5 16.7574 6.49264 15.75 5.25 15.75C4.00736 15.75 3 16.7574 3 18C3 19.2426 4.00736 20.25 5.25 20.25Z" fill="${this.fill}" />
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 3H16.5V4.875H20.625L23.25 7.5V15.75H22.875C22.6679 15.75 22.5 15.9179 22.5 16.125C22.5 16.3321 22.6679 16.5 22.875 16.5H23.25C23.6642 16.5 24 16.8358 24 17.25C24 17.6642 23.6642 18 23.25 18H20.25C20.25 16.3431 18.9069 15 17.25 15C15.5931 15 14.25 16.3431 14.25 18H8.25C8.25 16.3431 6.90685 15 5.25 15C3.59315 15 2.25 16.3431 2.25 18H0V3ZM22.5 7.81066L21.4393 6.75H16.5V11.25H22.5V7.81066Z"
+            fill="${this.fill}"
+          />
+          <path
+            d="M19.5 18C19.5 19.2426 18.4926 20.25 17.25 20.25C16.0074 20.25 15 19.2426 15 18C15 16.7574 16.0074 15.75 17.25 15.75C18.4926 15.75 19.5 16.7574 19.5 18Z"
+            fill="${this.fill}"
+          />
+          <path
+            d="M5.25 20.25C6.49264 20.25 7.5 19.2426 7.5 18C7.5 16.7574 6.49264 15.75 5.25 15.75C4.00736 15.75 3 16.7574 3 18C3 19.2426 4.00736 20.25 5.25 20.25Z"
+            fill="${this.fill}"
+          />
           ${clipPathDef}
         </svg>`;
       case "money":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
-          <path d="M14.0508 1.87659H16.5854C16.8886 1.87777 17.1715 2.02276 17.3417 2.26384C17.5119 2.50491 17.5472 2.81124 17.4362 3.08242L16.5854 5.4H7.41461L6.56378 3.08242C6.45278 2.81124 6.48814 2.5049 6.65832 2.26384C6.82849 2.02277 7.11141 1.87777 7.41463 1.87659H9.94952C10.4732 1.31861 11.2183 1 12.0002 1C12.782 1 13.5271 1.31859 14.0508 1.87659Z" fill="${this.fill}" />
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
+          <path
+            d="M14.0508 1.87659H16.5854C16.8886 1.87777 17.1715 2.02276 17.3417 2.26384C17.5119 2.50491 17.5472 2.81124 17.4362 3.08242L16.5854 5.4H7.41461L6.56378 3.08242C6.45278 2.81124 6.48814 2.5049 6.65832 2.26384C6.82849 2.02277 7.11141 1.87777 7.41463 1.87659H9.94952C10.4732 1.31861 11.2183 1 12.0002 1C12.782 1 13.5271 1.31859 14.0508 1.87659Z"
+            fill="${this.fill}"
+          />
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -1294,9 +1570,20 @@ class BwBrandSVG extends LitElement {
           ${clipPathDef}
         </svg>`;
       case "chat":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
-          <path d="M9.75 11.6154H4.5V10.8462H9.75V11.6154Z" fill="${this.fill}" />
-          <path d="M10.5 16.2308H4.5V15.4615H10.5V16.2308Z" fill="${this.fill}" />
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
+          <path
+            d="M9.75 11.6154H4.5V10.8462H9.75V11.6154Z"
+            fill="${this.fill}"
+          />
+          <path
+            d="M10.5 16.2308H4.5V15.4615H10.5V16.2308Z"
+            fill="${this.fill}"
+          />
           <path d="M4.5 13.9231H12V13.1538H4.5V13.9231Z" fill="${this.fill}" />
           <path
             fill-rule="evenodd"
@@ -1307,29 +1594,67 @@ class BwBrandSVG extends LitElement {
           ${clipPathDef}
         </svg>`;
       case "image":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
-          <path d="M9.00299 8.25C9.00299 8.84674 8.76594 9.41903 8.34398 9.84099C7.92203 10.2629 7.34973 10.5 6.75299 10.5C6.15626 10.5 5.58396 10.2629 5.162 9.84099C4.74005 9.41903 4.50299 8.84674 4.50299 8.25C4.50299 7.65326 4.74005 7.08097 5.162 6.65901C5.58396 6.23705 6.15626 6 6.75299 6C7.34973 6 7.92203 6.23705 8.34398 6.65901C8.76594 7.08097 9.00299 7.65326 9.00299 8.25Z" fill="${this.fill}" />
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.124999 19.6975C0.0441729 19.4803 0 19.2453 0 19V5C0 3.89543 0.895431 3 2 3H22C23.1046 3 24 3.89543 24 5V19C24 20.1046 23.1046 21 22 21H2C1.14076 21 0.40808 20.4582 0.124999 19.6975ZM2 4H22C22.5523 4 23 4.44771 23 5V14.4875L16.8375 11.3295C16.6968 11.259 16.5376 11.2346 16.3822 11.2596C16.2269 11.2847 16.0834 11.3579 15.972 11.469L10.407 17.034L6.417 14.376C6.27294 14.2801 6.10015 14.2369 5.92791 14.2539C5.75568 14.2708 5.5946 14.3468 5.472 14.469L1 18.5806V5C1 4.44772 1.44772 4 2 4Z" fill="${this.fill}" />
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
+          <path
+            d="M9.00299 8.25C9.00299 8.84674 8.76594 9.41903 8.34398 9.84099C7.92203 10.2629 7.34973 10.5 6.75299 10.5C6.15626 10.5 5.58396 10.2629 5.162 9.84099C4.74005 9.41903 4.50299 8.84674 4.50299 8.25C4.50299 7.65326 4.74005 7.08097 5.162 6.65901C5.58396 6.23705 6.15626 6 6.75299 6C7.34973 6 7.92203 6.23705 8.34398 6.65901C8.76594 7.08097 9.00299 7.65326 9.00299 8.25Z"
+            fill="${this.fill}"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0.124999 19.6975C0.0441729 19.4803 0 19.2453 0 19V5C0 3.89543 0.895431 3 2 3H22C23.1046 3 24 3.89543 24 5V19C24 20.1046 23.1046 21 22 21H2C1.14076 21 0.40808 20.4582 0.124999 19.6975ZM2 4H22C22.5523 4 23 4.44771 23 5V14.4875L16.8375 11.3295C16.6968 11.259 16.5376 11.2346 16.3822 11.2596C16.2269 11.2847 16.0834 11.3579 15.972 11.469L10.407 17.034L6.417 14.376C6.27294 14.2801 6.10015 14.2369 5.92791 14.2539C5.75568 14.2708 5.5946 14.3468 5.472 14.469L1 18.5806V5C1 4.44772 1.44772 4 2 4Z"
+            fill="${this.fill}"
+          />
           ${clipPathDef}
         </svg>`;
       case "watch":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M15.5 0L15.9187 5.02384C18.3546 6.39512 20 9.00542 20 12C20 14.9946 18.3546 17.6049 15.9187 18.9762L15.5 24H8.5L8.08135 18.9762C5.64535 17.6049 4 14.9946 4 12C4 9.00542 5.64535 6.39512 8.08135 5.02384L8.5 0H15.5ZM15.6076 6C14.554 5.36518 13.3197 5 12 5C10.6803 5 9.44596 5.36518 8.39241 6C6.35958 7.2249 5 9.45368 5 12C5 14.5463 6.35958 16.7751 8.39241 18C9.44595 18.6348 10.6803 19 12 19C13.2081 19 14.3448 18.6939 15.3366 18.1551C15.4282 18.1054 15.5185 18.0537 15.6076 18C17.6404 16.7751 19 14.5463 19 12C19 9.45367 17.6404 7.2249 15.6076 6Z"
             fill="${this.fill}"
           />
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.176 10.1698L12.0076 12.672L8.88538 10.9085L9.37718 10.0378L11.9923 11.5149L15.6613 9.31243L16.176 10.1698Z" fill="${this.fill}" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.176 10.1698L12.0076 12.672L8.88538 10.9085L9.37718 10.0378L11.9923 11.5149L15.6613 9.31243L16.176 10.1698Z"
+            fill="${this.fill}"
+          />
           ${clipPathDef}
         </svg>`;
       case "form":
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M22 2H2V22H22V2ZM9 15V13L17 5L19 7L11 15H9ZM5 6.5H11V5.5H5V6.5ZM5 12.5H8V11.5H5V12.5ZM5 9.57692H9V8.5H5V9.57692ZM5 15.5H7V14.5H5V15.5ZM19 18.5H5V17.5H19V18.5Z" fill="${this.fill}" />
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M22 2H2V22H22V2ZM9 15V13L17 5L19 7L11 15H9ZM5 6.5H11V5.5H5V6.5ZM5 12.5H8V11.5H5V12.5ZM5 9.57692H9V8.5H5V9.57692ZM5 15.5H7V14.5H5V15.5ZM19 18.5H5V17.5H19V18.5Z"
+            fill="${this.fill}"
+          />
           ${clipPathDef}
         </svg>`;
       default:
-        return html`<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:${this.size}">
+        return html`<svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width:${this.size}"
+        >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -1342,7 +1667,9 @@ class BwBrandSVG extends LitElement {
   }
 
   alignIcon(align) {
-    return ["center", "flex-start", "flex-end"].includes(align) ? align : "inherit";
+    return ["center", "flex-start", "flex-end"].includes(align)
+      ? align
+      : "inherit";
   }
 
   render() {
@@ -1378,7 +1705,10 @@ class Grid2 extends LitElement {
       footer {
         --gap: 64px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(calc(var(--col-width) - var(--gap)), 1fr));
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(calc(var(--col-width) - var(--gap)), 1fr)
+        );
         gap: var(--gap);
         width: 100%;
         max-width: var(--max-width, 100%);
@@ -1457,7 +1787,10 @@ class Grid extends LitElement {
         --gap-sm: var(--grid-gap-sm, 24px);
         --gap-xs: var(--grid-gap-xs, 16px);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(calc(var(--col-width) - var(--gap)), 1fr));
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(calc(var(--col-width) - var(--gap)), 1fr)
+        );
         gap: var(--gap);
         width: 100%;
         max-width: var(--max-width, 100%);
@@ -1505,7 +1838,9 @@ class HeadingBlurb extends LitElement {
       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
       -moz-box-sizing: border-box; /* Firefox, other Gecko */
       box-sizing: border-box;
-      font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -1523,7 +1858,9 @@ class HeadingBlurb extends LitElement {
     h5,
     h6 {
       margin: 0 0 8px 0;
-      font-family: var(--bw-font-head), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-family: var(--bw-font-head), -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
       text-transform: capitalize;
       font-style: normal;
     }
@@ -1688,7 +2025,8 @@ class BwImage extends LitElement {
 
   constructor() {
     super();
-    this.defImg = "https://images.unsplash.com/photo-1693748960930-aa517d67fe00";
+    this.defImg =
+      "https://images.unsplash.com/photo-1693748960930-aa517d67fe00";
     this.imgixOpt = "?&auto=format&q=15&chromasub=444";
   }
 
@@ -1704,10 +2042,26 @@ class BwImage extends LitElement {
     const imgLogic = src + this.imgixOpt;
     return html`
       <picture class="bw-picture">
-        <source media="(max-width: 479px)" srcset="${imgLogic}&w=480&dpr=2 2x, ${imgLogic}&w=480&dpr=3 3x" />
-        <source media="(min-width: 480px) and (max-width: 1199px)" srcset="${imgLogic}&w=840&dpr=2 2x, ${imgLogic}&w=840&dpr=3 3x" />
-        <source media="(min-width: 1200px)" srcset="${imgLogic}&w=1280&dpr=2 2x, ${imgLogic}&w=1280&dpr=3 3x" />
-        <img class="bw-image" src="${src}" loading="${this.lazyLoading || "eager"}" fetchpriority="${this.imgPriority || "low"}" alt="${this.altTag}" style="aspect-ratio: ${this.imgRatio};" />
+        <source
+          media="(max-width: 479px)"
+          srcset="${imgLogic}&w=480&dpr=2 2x, ${imgLogic}&w=480&dpr=3 3x"
+        />
+        <source
+          media="(min-width: 480px) and (max-width: 1199px)"
+          srcset="${imgLogic}&w=840&dpr=2 2x, ${imgLogic}&w=840&dpr=3 3x"
+        />
+        <source
+          media="(min-width: 1200px)"
+          srcset="${imgLogic}&w=1280&dpr=2 2x, ${imgLogic}&w=1280&dpr=3 3x"
+        />
+        <img
+          class="bw-image"
+          src="${src}"
+          loading="${this.lazyLoading || "eager"}"
+          fetchpriority="${this.imgPriority || "low"}"
+          alt="${this.altTag}"
+          style="aspect-ratio: ${this.imgRatio};"
+        />
       </picture>
     `;
   }
@@ -1739,7 +2093,9 @@ class BwOverlineText extends LitElement {
       }
 
       .bw-overline-container__overline {
-        font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
         display: block;
         text-transform: uppercase;
         font-size: 16px;
@@ -1799,8 +2155,19 @@ class BwOverlineText extends LitElement {
     const isReverse = this.reverse === true;
     return html`
       <h2 class="bw-overline-container" id="${this.uid}">
-        <span class="${isReverse ? "bw-overline-container__title" : "bw-overline-container__overline"}" style="margin-bottom: 4px;">${isReverse ? this.title : this.overline}</span>
-        <span class="${isReverse ? "bw-overline-container__overline" : "bw-overline-container__title"}">${isReverse ? this.overline : this.title}</span>
+        <span
+          class="${isReverse
+            ? "bw-overline-container__title"
+            : "bw-overline-container__overline"}"
+          style="margin-bottom: 4px;"
+          >${isReverse ? this.title : this.overline}</span
+        >
+        <span
+          class="${isReverse
+            ? "bw-overline-container__overline"
+            : "bw-overline-container__title"}"
+          >${isReverse ? this.overline : this.title}</span
+        >
       </h2>
     `;
   }
@@ -1830,7 +2197,9 @@ class bwButton extends LitElement {
         width: var(--width, auto);
         max-width: var(--max-width, 100%);
         display: flex;
-        font-family: Inter, proxima_nova_semibold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: Inter, proxima_nova_semibold, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-weight: 600;
         flex-direction: row;
         align-items: center;
@@ -1973,9 +2342,13 @@ class bwButton extends LitElement {
 
   render() {
     if (this.kind === "link") {
-      return html`<a href=${this.link} class=${this.computeClass(this.variant)} id="${this.id}" style="${this.styles}"><slot></a>`;
+      return html`<a href=${this.link} class=${this.computeClass(
+        this.variant
+      )} id="${this.id}" style="${this.styles}"><slot></a>`;
     } else {
-      return html`<button class=${this.computeClass(this.variant)} id="${this.id}" style="${this.styles}"><slot></button>`;
+      return html`<button class=${this.computeClass(this.variant)} id="${
+        this.id
+      }" style="${this.styles}"><slot></button>`;
     }
   }
 }
@@ -2043,7 +2416,9 @@ class BwFwBanner extends LitElement {
       }
 
       & .bw-fw-banner-overline {
-        font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
         display: block;
         text-transform: uppercase;
         font-size: 16px;
@@ -2069,7 +2444,9 @@ class BwFwBanner extends LitElement {
     }
 
     .bw-fw-banner-paragraph {
-      font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-family: var(--bw-font-body), -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
       margin: 0;
       line-height: 24px;
     }
@@ -2124,10 +2501,31 @@ class BwFwBanner extends LitElement {
 
   render() {
     return html`
-      <section class="bw-fw-banner-container ${this.layout || "img-left"}" role="banner" aria-labelledby="${this.titleId}">
-        ${this.variant === "video" ? html`<bw-ytembed imgix="false" ratio="16/8" videoID="${this.videoID}" image="${this.imgSrc}"></bw-ytembed>` : html`<bw-image src="${this.imgSrc}" lazy-loading="${this.lazyLoading}" priority="${this.imgPriority}" alt="${this.title} Banner Image" ratio="16/8"></bw-image>`}
+      <section
+        class="bw-fw-banner-container ${this.layout || "img-left"}"
+        role="banner"
+        aria-labelledby="${this.titleId}"
+      >
+        ${this.variant === "video"
+          ? html`<bw-ytembed
+              imgix="false"
+              ratio="16/8"
+              videoID="${this.videoID}"
+              image="${this.imgSrc}"
+            ></bw-ytembed>`
+          : html`<bw-image
+              src="${this.imgSrc}"
+              lazy-loading="${this.lazyLoading}"
+              priority="${this.imgPriority}"
+              alt="${this.title} Banner Image"
+              ratio="16/8"
+            ></bw-image>`}
         <div class="bw-fw-banner-content">
-          <bw-overline-text overline="${this.overline}" title="${this.title}" uid="${this.titleId}"></bw-overline-text>
+          <bw-overline-text
+            overline="${this.overline}"
+            title="${this.title}"
+            uid="${this.titleId}"
+          ></bw-overline-text>
           <p class="bw-fw-banner-paragraph"><slot name="content"></slot></p>
           <div style="margin-top: 56px;"><slot name="cta"></slot></div>
         </div>
@@ -2183,8 +2581,38 @@ class BwTabs extends LitElement {
 
   render() {
     return html`
-      <div class="tabs-buttons" role="tablist">${this.tabNames.map((tabName, index) => html` <button id="tab${index}" class="tab-button ${this.activeTab === index ? "active" : ""}" role="tab" aria-selected="${this.activeTab === index ? "true" : "false"}" tabindex="${this.activeTab === index ? "0" : "-1"}" @click="${() => (this.activeTab = index)}" @keydown="${this._handleKeydown}">${tabName || `Tab ${index + 1}`}</button> `)}</div>
-      <div class="tabs-content">${this.tabNames.map((_, index) => html` <div class="tab-content ${this.activeTab === index ? "active" : ""}" role="tabpanel" aria-labelledby="tab${index}">Content for Tab ${index + 1}</div> `)}</div>
+      <div class="tabs-buttons" role="tablist">
+        ${this.tabNames.map(
+          (tabName, index) =>
+            html`
+              <button
+                id="tab${index}"
+                class="tab-button ${this.activeTab === index ? "active" : ""}"
+                role="tab"
+                aria-selected="${this.activeTab === index ? "true" : "false"}"
+                tabindex="${this.activeTab === index ? "0" : "-1"}"
+                @click="${() => (this.activeTab = index)}"
+                @keydown="${this._handleKeydown}"
+              >
+                ${tabName || `Tab ${index + 1}`}
+              </button>
+            `
+        )}
+      </div>
+      <div class="tabs-content">
+        ${this.tabNames.map(
+          (_, index) =>
+            html`
+              <div
+                class="tab-content ${this.activeTab === index ? "active" : ""}"
+                role="tabpanel"
+                aria-labelledby="tab${index}"
+              >
+                Content for Tab ${index + 1}
+              </div>
+            `
+        )}
+      </div>
     `;
   }
 
@@ -2192,7 +2620,8 @@ class BwTabs extends LitElement {
     if (e.key === "ArrowRight") {
       this.activeTab = (this.activeTab + 1) % this.tabNames.length;
     } else if (e.key === "ArrowLeft") {
-      this.activeTab = (this.activeTab - 1 + this.tabNames.length) % this.tabNames.length;
+      this.activeTab =
+        (this.activeTab - 1 + this.tabNames.length) % this.tabNames.length;
     }
   }
 }

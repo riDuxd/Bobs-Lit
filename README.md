@@ -1,2 +1,2 @@
 # Bobs-Lit
-Created with CodeSandbox
+Lit Web Components for Bob's Watches
